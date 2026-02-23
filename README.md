@@ -2,7 +2,7 @@
 
 A collection of slash commands for [Claude Code](https://claude.ai/claude-code).
 
-Each skill is a markdown file that lives in `~/.claude/skills/` and teaches Claude a reusable workflow you can trigger with a short command.
+Each skill is a markdown file that lives in `~/.claude/commands/` and teaches Claude a reusable workflow you can trigger with a short command.
 
 ---
 
@@ -26,7 +26,7 @@ Claude will ask you a series of multiple-choice questions and write the skill fi
 
 ### Manual setup
 
-1. Copy [`session-wrap/template.md`](./session-wrap/template.md) to `~/.claude/skills/wrap.md` (or your preferred name)
+1. Copy [`session-wrap/template.md`](./session-wrap/template.md) to `~/.claude/commands/wrap.md` (or your preferred name)
 2. Open it and replace each `{{PLACEHOLDER}}` with your choice
 3. Delete the comment blocks for options you didn't choose
 4. Done — use your command at the end of any session
@@ -98,17 +98,9 @@ How Claude picks the session name:
 
 ## How Claude skills work
 
-A skill is a markdown file in `~/.claude/skills/`. When you run `/skill-name` in Claude Code, Claude reads the file and follows the instructions inside it.
+A skill is a markdown file in `~/.claude/commands/`. When you run `/skill-name` in Claude Code, Claude reads the file and follows the instructions inside it.
 
-To register a skill so Claude knows it exists, add an entry to `~/.claude/CLAUDE.md` under a "Custom Skills" section:
-
-```markdown
-## Custom Skills
-
-- **wrap** — saves session summary to research/sessions/ and commits it
-  - Usage: `/wrap` at the end of any session
-  - See: `~/.claude/skills/wrap.md`
-```
+Claude Code auto-discovers all `.md` files in `~/.claude/commands/` — no registration step required. Drop a file there and the command is immediately available.
 
 ---
 
