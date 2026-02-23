@@ -78,9 +78,8 @@ Options:
 After collecting all answers:
 
 1. Generate a customized skill file based on my choices
-2. Save it to ~/.claude/skills/{command-name-without-slash}.md
-3. Add an entry for it in ~/.claude/CLAUDE.md under "Custom Skills → Available Skills" if that section exists
-4. Confirm with: "Skill saved → ~/.claude/skills/{command-name}.md — use it with {command-name}"
+2. Save it to ~/.claude/commands/{command-name-without-slash}.md
+3. Confirm with: "Skill saved → ~/.claude/commands/{command-name}.md — use it with {command-name}"
 
 Do not show me the file contents unless I ask. Just run the questions, generate, save, and confirm.
 ```
