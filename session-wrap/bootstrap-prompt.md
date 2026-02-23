@@ -1,12 +1,12 @@
-# Bootstrap Prompt — Session Wrap Skill
+# Bootstrap Prompt — session-wrap
 
 Copy the text below and paste it into any Claude Code session.
-Claude will ask you the setup questions and write the skill file automatically.
+Claude will ask you the setup questions and write the command file automatically.
 
 ---
 
 ```
-I want to create a slash command that saves a session summary at the end of conversations. Please help me set it up by asking me the following questions one group at a time, then generate and save the skill file.
+I want to create a slash command that saves a session summary at the end of conversations. Please help me set it up by asking me the following questions one group at a time, then generate and save the command file.
 
 ---
 
@@ -77,9 +77,9 @@ Options:
 
 After collecting all answers:
 
-1. Generate a customized skill file based on my choices
+1. Generate a customized command file based on my choices
 2. Save it to ~/.claude/commands/{command-name-without-slash}.md
-3. Confirm with: "Skill saved → ~/.claude/commands/{command-name}.md — use it with {command-name}"
+3. Confirm with: "Saved → ~/.claude/commands/{command-name}.md — use it with {command-name}"
 
 Do not show me the file contents unless I ask. Just run the questions, generate, save, and confirm.
 ```
