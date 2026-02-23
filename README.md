@@ -2,15 +2,15 @@
 
 A collection of slash commands for [Claude Code](https://claude.ai/claude-code).
 
-Each skill is a markdown file that lives in `~/.claude/commands/` and teaches Claude a reusable workflow you can trigger with a short command.
+Each command is a markdown file that lives in `~/.claude/commands/` and teaches Claude a reusable workflow you can trigger with a short slash command.
 
 ---
 
-## Skills
+## Commands
 
-| Skill | Command | What it does |
-|-------|---------|--------------|
-| [session-wrap](./session-wrap/) | `/wrap` (or your choice) | Saves a structured session summary and optionally commits it |
+| Command | What it does |
+|---------|--------------|
+| [session-wrap](./session-wrap/) `/wrap` | Saves a structured session summary and optionally commits it |
 
 ---
 
@@ -22,7 +22,7 @@ Save a structured markdown summary of your Claude Code session — what was buil
 
 Paste the contents of [`session-wrap/bootstrap-prompt.md`](./session-wrap/bootstrap-prompt.md) into any Claude Code session.
 
-Claude will ask you a series of multiple-choice questions and write the skill file for you automatically. No manual editing required.
+Claude will ask you a series of multiple-choice questions and write the command file for you automatically. No manual editing required.
 
 ### Manual setup
 
@@ -34,7 +34,7 @@ Claude will ask you a series of multiple-choice questions and write the skill fi
 ### What you can customize
 
 **Command name**
-How you invoke the skill. Popular choices:
+How you invoke it. Popular choices:
 
 | Option | Best for |
 |--------|----------|
@@ -96,9 +96,9 @@ How Claude picks the session name:
 
 ---
 
-## How Claude skills work
+## How slash commands work
 
-A skill is a markdown file in `~/.claude/commands/`. When you run `/skill-name` in Claude Code, Claude reads the file and follows the instructions inside it.
+A slash command is a markdown file in `~/.claude/commands/`. When you run `/command-name` in Claude Code, Claude reads the file and follows the instructions inside it.
 
 Claude Code auto-discovers all `.md` files in `~/.claude/commands/` — no registration step required. Drop a file there and the command is immediately available.
 
@@ -106,7 +106,7 @@ Claude Code auto-discovers all `.md` files in `~/.claude/commands/` — no regis
 
 ## Contributing
 
-Got a skill you use regularly? PRs welcome. Keep each skill in its own folder with:
-- `template.md` — the parameterized skill file
+Got a command you use regularly? PRs welcome. Keep each command in its own folder with:
+- `template.md` — the parameterized command file
 - `bootstrap-prompt.md` — a paste-into-Claude setup prompt
 - An entry in this README
